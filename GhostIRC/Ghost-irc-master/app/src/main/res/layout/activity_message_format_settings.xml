@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.mrarm.irc.MessageFormatSettingsActivity"
+    tools:showIn="@layout/activity_message_format_settings">
+
+    <io.mrarm.irc.view.MessageFormatSettingsFormatBar
+        android:id="@+id/format_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/format_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date_format_ctr"
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/date_format"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/date_format_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/date_fixed_width"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message_format_date_fixed_width"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_s4"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_s4" />
+
+            <View style="@style/MessageFormatSettingsDivider"
+                android:layout_marginTop="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_normal">
+
+                <io.mrarm.irc.view.FormattableEditText
+                    android:id="@+id/message_format_normal"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/message_format_normal_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/message_format_normal_example"
+                style="@style/MessageFormatSettingsExampleText" />
+
+            <View style="@style/MessageFormatSettingsDivider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_normal_mention">
+
+                <io.mrarm.irc.view.FormattableEditText
+                    android:id="@+id/message_format_normal_mention"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/message_format_normal_mention_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/message_format_normal_mention_example"
+                style="@style/MessageFormatSettingsExampleText" />
+
+            <View style="@style/MessageFormatSettingsDivider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_action">
+
+                <io.mrarm.irc.view.FormattableEditText
+                    android:id="@+id/message_format_action"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/message_format_action_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/message_format_action_example"
+                style="@style/MessageFormatSettingsExampleText" />
+
+            <View style="@style/MessageFormatSettingsDivider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_action_mention">
+
+                <io.mrarm.irc.view.FormattableEditText
+                    android:id="@+id/message_format_action_mention"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/message_format_action_mention_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/message_format_action_mention_example"
+                style="@style/MessageFormatSettingsExampleText" />
+
+            <View style="@style/MessageFormatSettingsDivider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_notice">
+
+                <io.mrarm.irc.view.FormattableEditText
+                    android:id="@+id/message_format_notice"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/message_format_notice_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/message_format_notice_example"
+                style="@style/MessageFormatSettingsExampleText" />
+
+            <View style="@style/MessageFormatSettingsDivider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MessageFormatSettingsTextInputLayout"
+                android:hint="@string/message_format_event">
+
+                <io.mrarm.irc.view.FormattableEditText
+                    android:id="@+id/message_format_event"
+                    style="@style/EditTextWithExpandIcon" />
+
+                <ImageButton
+                    android:id="@+id/message_format_event_preset"
+                    style="@style/EditTextExpandIconButton"
+                    android:contentDescription="@string/value_preset"
+                    app:srcCompat="@drawable/ic_expand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/message_format_event_example"
+                style="@style/MessageFormatSettingsExampleText" />
+
+            <CheckBox
+                android:id="@+id/message_format_event_hostname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message_format_event_hostname"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_s4"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_s4"
+                android:layout_marginTop="8dp" />
+
+            <View style="@style/MessageFormatSettingsDivider" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="single_list_item_height">48dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+
+    <dimen name="activity_horizontal_margin_s4">12dp</dimen>
+    <dimen name="activity_horizontal_margin_s12">4dp</dimen>
+
+    <dimen name="collapse_toolbar_activate_height">250dp</dimen>
+    <dimen name="compact_toolbar_activate_height">400dp</dimen>
+
+    <dimen name="drawer_divider_margin">8dp</dimen>
+    <dimen name="drawer_search_margin">2dp</dimen>
+
+    <dimen name="chip_edit_text_horizontal_padding">4dp</dimen>
+    <dimen name="chip_edit_text_min_height">24dp</dimen>
+
+    <dimen name="progressbar_arc_thickness">4dp</dimen>
+
+    <dimen name="simple_bar_chart_radius">2dp</dimen>
+
+    <dimen name="bottom_sheet_min_height">196dp</dimen>
+
+    <dimen name="bottom_sheet_menu_vertical_margin">8dp</dimen>
+    <dimen name="bottom_sheet_menu_horizontal_margin">16dp</dimen>
+
+    <dimen name="list_popup_max_height">180dp</dimen>
+
+    <dimen name="dialog_bottom_user_header_height">224dp</dimen>
+    <dimen name="dialog_bottom_user_header_height_compact">73dp</dimen>
+    <dimen name="dialog_bottom_user_header_height_compact_activate">200dp</dimen>
+    <dimen name="dialog_bottom_user_header_bottom_margin">16dp</dimen>
+    <dimen name="dialog_bottom_user_header_name_bottom_margin">40dp</dimen>
+    <dimen name="dialog_bottom_user_header_name_bottom_margin_target">14dp</dimen>
+    <dimen name="dialog_bottom_user_header_min_height">56dp</dimen>
+    <dimen name="dialog_bottom_user_header_min_height_compact">48dp</dimen>
+    <dimen name="dialog_bottom_user_header_bottom_margin_compact">12dp</dimen>
+    <dimen name="dialog_bottom_user_header_name_bottom_margin_compact">36dp</dimen>
+    <dimen name="dialog_bottom_user_header_name_bottom_margin_target_compact">11dp</dimen>
+
+    <dimen name="message_edit_text_margin_left">16dp</dimen>
+    <dimen name="touch_press_select_autoscroll_amount">500dp</dimen>
+
+    <dimen name="setting_vertical_padding">16dp</dimen>
+    <dimen name="setting_horizontal_padding">16dp</dimen>
+
+    <dimen name="setting_vertical_padding_compact">12dp</dimen>
+
+    <dimen name="add_server_item_spacing">12dp</dimen>
+    <dimen name="add_server_autocomplete_dialog_dist">4dp</dimen>
+
+    <dimen name="edit_command_alias_spacing">12dp</dimen>
+
+    <dimen name="notification_rule_list_header_padding">8dp</dimen>
+    <dimen name="item_swipe_icon_padding">16dp</dimen>
+
+    <dimen name="storage_chat_logs_summary_padding_bottom">8dp</dimen>
+    <dimen name="storage_chat_logs_summary_padding_bottom_no_items">24dp</dimen>
+
+    <dimen name="setup_header_padding">32dp</dimen>
+    <dimen name="setup_header_padding_m4">28dp</dimen>
+
+    <dimen name="color_list_spacing">4dp</dimen>
+</resources>

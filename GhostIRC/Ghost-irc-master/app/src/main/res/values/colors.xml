@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="iconColor">#89000000</color>
+    <color name="iconColorText">#000000</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="rippleColor">@color/ripple_material_light</color>
+
+    <color name="searchDialogDim">#99000000</color>
+    <color name="searchColorPrimary">#FFFFFF</color>
+    <color name="searchColorPrimaryDark">#EEEEEE</color>
+    <color name="searchColorHighlight">#F50057</color>
+
+    <color name="userAwayColorPrimary">#FF5722</color>
+    <color name="userAwayColorPrimaryDark">#E64A19</color>
+
+    <color name="chipColor">#402196F3</color>
+    <color name="transparentChipColor">#20000000</color>
+
+    <color name="colorSwipeDeleteBackground">#D50000</color>
+    <color name="colorSwipeIconColor">#FFFFFF</color>
+
+    <color name="colorNotificationMention">#3F51B5</color>
+
+    <color name="serverListConnected">#8BC34A</color>
+    <color name="serverListConnecting">#FFC107</color>
+    <color name="serverListDisconnected">#FF5722</color>
+    <color name="serverListInactive">#03A9F4</color>
+
+    <color name="ircBlack">#000</color>
+    <color name="ircWhite">#fff</color>
+    <color name="ircBlue">#1565C0</color>
+    <color name="ircGreen">#2E7D32</color>
+    <color name="ircLightRed">#FF1744</color>
+    <color name="ircBrown">#5D4037</color>
+    <color name="ircPurple">#6A1B9A</color>
+    <color name="ircOrange">#EF6C00</color>
+    <color name="ircYellow">#F9A825</color>
+    <color name="ircLightGreen">#558B2F</color>
+    <color name="ircCyan">#00838F</color>
+    <color name="ircLightCyan">#00B8D4</color>
+    <color name="ircLightBlue">#0277BD</color>
+    <color name="ircPink">#AD1457</color>
+    <color name="ircGray">#757575</color>
+    <color name="ircLightGray">#9E9E9E</color>
+
+    <color name="messageTimestamp">#424242</color>
+    <color name="messageStatusText">#616161</color>
+    <color name="messageDisconnected">#FF1744</color>
+    <color name="messageTopic">#000</color>
+
+    <color name="memberOwner">#FF8F00</color>
+    <color name="memberAdmin">#9E9D24</color>
+    <color name="memberOp">#558B2F</color>
+    <color name="memberHalfOp">#00695C</color>
+    <color name="memberVoice">#0277BD</color>
+    <color name="memberNormal">#000</color>
+
+    <color name="motdColor">#1976D2</color>
+
+    <color name="formatDefaultColorIndicator">#5C000000</color>
+
+    <color name="ignoreEntryNick">#0277BD</color>
+    <color name="ignoreEntryUser">#558B2F</color>
+    <color name="ignoreEntryHost">#D84315</color>
+
+    <color name="storageSettingsChartFirst">#2979FF</color>
+    <color name="storageSettingsChartSecond">#00E676</color>
+    <color name="storageSettingsChartThird">#FFC400</color>
+    <color name="storageSettingsChartOthers">#90A4AE</color>
+
+    <integer-array name="colorPickerColors">
+        <item>@color/ircBlack</item>
+        <item>@color/ircWhite</item>
+        <item>@color/ircBlue</item>
+        <item>@color/ircGreen</item>
+        <item>@color/ircLightRed</item>
+        <item>@color/ircBrown</item>
+        <item>@color/ircPurple</item>
+        <item>@color/ircOrange</item>
+        <item>@color/ircYellow</item>
+        <item>@color/ircLightGreen</item>
+        <item>@color/ircCyan</item>
+        <item>@color/ircLightCyan</item>
+        <item>@color/ircLightBlue</item>
+        <item>@color/ircPink</item>
+        <item>@color/ircGray</item>
+        <item>@color/ircLightGray</item>
+    </integer-array>
+
+    <color name="extraFormatTextColor1">#D84315</color>
+    <color name="extraFormatTextColor2">#283593</color>
+
+    <integer-array name="formatTextColors">
+        <item>@color/ircBlack</item>
+        <item>@color/ircWhite</item>
+        <item>@color/ircBlue</item>
+        <item>@color/ircGreen</item>
+        <item>@color/ircLightRed</item>
+        <item>@color/ircBrown</item>
+        <item>@color/ircPurple</item>
+        <item>@color/ircOrange</item>
+        <item>@color/ircYellow</item>
+        <item>@color/ircLightGreen</item>
+        <item>@color/ircCyan</item>
+        <item>@color/ircLightCyan</item>
+        <item>@color/ircLightBlue</item>
+        <item>@color/extraFormatTextColor2</item>
+        <item>@color/ircPink</item>
+        <item>@color/extraFormatTextColor1</item>
+        <item>@color/ircLightGray</item>
+        <item>@color/ircGray</item>
+        <item>@color/messageStatusText</item>
+        <item>@color/messageTimestamp</item>
+    </integer-array>
+
+</resources>

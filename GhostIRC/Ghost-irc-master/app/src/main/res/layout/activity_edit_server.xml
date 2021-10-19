@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:clipToPadding="false"
+    tools:context="io.mrarm.irc.EditServerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            style="@style/EditServerItemContainer"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                app:srcCompat="@drawable/ic_server_name"
+                style="@style/EditServerIcon.TextInput" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/server_name_ctr"
+                style="@style/EditServerTextInput"
+                android:hint="@string/entry_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/server_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer">
+
+            <ImageView
+                app:srcCompat="@drawable/ic_server_address"
+                style="@style/EditServerIcon.TextInput" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/server_address_port_ctr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/server_port">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/server_address_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|numberSigned"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/EditServerTextInput"
+                android:id="@+id/server_address_name_ctr"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="false"
+                android:layout_marginRight="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toLeftOf="@id/server_address_port_ctr"
+                android:layout_toStartOf="@id/server_address_port_ctr"
+                android:hint="@string/server_address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/server_address_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer">
+
+            <ImageView
+                android:id="@+id/server_ssl_icon"
+                app:srcCompat="@drawable/ic_server_ssl"
+                style="@style/EditServerIcon" />
+
+            <CheckBox
+                android:id="@+id/server_ssl_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/server_ssl_icon"
+                android:layout_toEndOf="@id/server_ssl_icon"
+                android:layout_centerVertical="true"
+                android:text="@string/server_ssl"
+                android:checked="true" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/server_ssl_certs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/server_ssl_cert_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_settings"
+                style="@style/Icon.Opaque"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:contentDescription="@string/server_manage_custom_certs" />
+
+            <TextView
+                android:id="@+id/server_ssl_cert_lbl"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="64dp"
+                android:layout_marginStart="64dp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/server_ssl_cert_manage"
+                android:layout_toStartOf="@+id/server_ssl_cert_manage" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer">
+
+            <ImageView
+                app:srcCompat="@drawable/ic_server_password"
+                style="@style/EditServerIcon.TextInput" />
+
+            <RelativeLayout
+                android:id="@+id/server_password_main_ctr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <io.mrarm.irc.view.StaticLabelTextInputLayout
+                    android:id="@+id/server_password_ctr"
+                    android:hint="@string/server_password"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+                    app:passwordToggleEnabled="true"
+                    style="@style/EditServerTextInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/server_password"
+                        android:inputType="textPassword" />
+
+                </io.mrarm.irc.view.StaticLabelTextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/server_password_reset"
+                    app:srcCompat="@drawable/ic_close"
+                    style="@style/EditServerExtraAction"
+                    android:visibility="gone"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/action_delete" />
+
+            </RelativeLayout>
+
+            <io.mrarm.irc.view.LabelLayout
+                android:id="@+id/server_auth_mode_ctr"
+                android:hint="@string/server_authentication_mode"
+                android:layout_below="@+id/server_password_main_ctr"
+                android:layout_marginTop="8dp"
+                style="@style/EditServerTextInput">
+
+                <Spinner
+                    android:id="@+id/server_auth_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/AppTheme.Spinner" />
+
+            </io.mrarm.irc.view.LabelLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/server_auth_username_ctr"
+                android:layout_below="@+id/server_auth_mode_ctr"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                style="@style/EditServerTextInput"
+                android:hint="@string/entry_username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/server_auth_username" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/server_auth_password_main_ctr"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/server_auth_username_ctr">
+
+                <io.mrarm.irc.view.StaticLabelTextInputLayout
+                    android:id="@+id/server_auth_password_ctr"
+                    android:hint="@string/entry_password"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+                    app:passwordToggleEnabled="true"
+                    style="@style/EditServerTextInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/server_auth_password"
+                        android:inputType="textPassword" />
+
+                </io.mrarm.irc.view.StaticLabelTextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/server_auth_password_reset"
+                    app:srcCompat="@drawable/ic_close"
+                    style="@style/EditServerExtraAction"
+                    android:visibility="gone"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/action_delete" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/server_sasl_ext_main_ctr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_below="@+id/server_auth_username_ctr">
+
+                <TextView
+                    android:id="@+id/server_sasl_ext_fp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textIsSelectable="true"
+                    android:text="@string/server_sasl_ext_none" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap">
+
+                    <Button
+                        android:id="@+id/server_sasl_ext_import"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:text="@string/server_sasl_ext_import" />
+
+                    <Button
+                        android:id="@+id/server_sasl_ext_create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:text="@string/server_sasl_ext_create" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer">
+
+            <ImageView
+                android:id="@+id/server_user_icon"
+                app:srcCompat="@drawable/ic_user"
+                style="@style/EditServerIcon.TextInput" />
+
+            <ImageButton
+                android:id="@+id/server_user_expand"
+                app:srcCompat="@drawable/ic_expand"
+                style="@style/EditServerExtraAction"
+                android:contentDescription="@string/action_expand" />
+
+            <io.mrarm.irc.view.LabelLayout
+                style="@style/EditServerTextInput.ExtraAction"
+                android:hint="@string/server_nicks">
+
+                <io.mrarm.irc.view.ChipsEditText
+                    android:id="@+id/server_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </io.mrarm.irc.view.LabelLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/EditServerItemContainer"
+            android:id="@+id/server_user_expand_content"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/server_user_ctr"
+                style="@style/EditServerTextInput"
+                android:layout_marginRight="56dp"
+                android:layout_marginEnd="56dp"
+                android:hint="@string/server_user">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/server_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/EditServerTextInput"
+                android:layout_marginRight="56dp"
+                android:layout_marginEnd="56dp"
+                android:layout_below="@+id/server_user_ctr"
+                android:layout_marginTop="8dp"
+                android:hint="@string/server_realname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/server_realname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer">
+
+            <ImageView
+                android:id="@+id/server_channels_icon"
+                app:srcCompat="@drawable/ic_list"
+                style="@style/EditServerIcon.TextInput" />
+
+            <io.mrarm.irc.view.LabelLayout
+                android:id="@+id/server_channels_ctr"
+                style="@style/EditServerTextInput"
+                android:hint="@string/server_channels">
+
+                <io.mrarm.irc.view.ChipsEditText
+                    android:id="@+id/server_channels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </io.mrarm.irc.view.LabelLayout>
+
+            <CheckBox
+                android:id="@+id/server_rejoin_channels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/server_channels_icon"
+                android:layout_toEndOf="@id/server_channels_icon"
+                android:layout_below="@id/server_channels_ctr"
+                android:layout_marginTop="6dp"
+                android:text="@string/server_rejoin_channels" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer"
+            android:layout_marginTop="14dp">
+
+            <ImageView
+                android:id="@+id/server_commands_icon"
+                app:srcCompat="@drawable/ic_keyboard"
+                style="@style/EditServerIcon.TextInput" />
+
+            <io.mrarm.irc.view.LabelLayout
+                android:id="@+id/server_commands_ctr"
+                style="@style/EditServerTextInput"
+                android:hint="@string/server_commands">
+
+                <io.mrarm.irc.view.AutoRunCommandListEditText
+                    android:id="@+id/server_commands"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </io.mrarm.irc.view.LabelLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/EditServerItemContainer"
+            android:layout_marginTop="14dp">
+
+            <ImageView
+                android:id="@+id/server_encoding_icon"
+                app:srcCompat="@drawable/ic_translate"
+                style="@style/EditServerIcon.TextInput" />
+
+            <io.mrarm.irc.view.LabelLayout
+                android:id="@+id/server_encoding_ctr"
+                style="@style/EditServerTextInput"
+                android:hint="@string/server_encoding">
+
+                <Spinner
+                    android:id="@+id/server_encoding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/AppTheme.Spinner" />
+
+            </io.mrarm.irc.view.LabelLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

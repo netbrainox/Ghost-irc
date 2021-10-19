@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ircColors" type="reference" />
+    <attr name="actionBarTextColorPrimary" type="reference" />
+    <attr name="actionBarTextColorSecondary" type="reference" />
+
+    <attr name="iconColor" type="reference" />
+    <attr name="iconColorOpaque" type="reference" />
+
+    <attr name="textFormatBarStyle" type="reference" />
+    <attr name="recyclerViewScrollbarStyle" type="reference" />
+
+    <declare-styleable name="MaterialColorPicker">
+        <attr name="maxWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="LabelLayout">
+        <attr name="android:textColorHint" format="color" />
+        <attr name="doNotExpand" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ListWithCustomPreference">
+        <attr name="customValueType" format="enum">
+            <enum name="string" value="0" />
+            <enum name="number" value="1" />
+            <enum name="file" value="2" />
+            <enum name="font" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerViewScrollbar">
+        <attr name="recyclerView" format="reference" />
+        <attr name="scrollbarDrawable" format="reference" />
+        <attr name="scrollbarTint" format="reference" />
+        <attr name="minScrollbarHeight" format="dimension" />
+        <attr name="letterDrawable" format="reference" />
+        <attr name="letterTint" format="reference" />
+        <attr name="letterTextAppearance" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="OpaqueStatusBarRelativeLayout">
+        <attr name="colorPrimaryDark" />
+    </declare-styleable>
+
+    <declare-styleable name="IRCColors">
+        <attr name="colorBlack" format="color" />
+        <attr name="colorWhite" format="color" />
+        <attr name="colorBlue" format="color" />
+        <attr name="colorGreen" format="color" />
+        <attr name="colorLightRed" format="color" />
+        <attr name="colorBrown" format="color" />
+        <attr name="colorPurple" format="color" />
+        <attr name="colorOrange" format="color" />
+        <attr name="colorYellow" format="color" />
+        <attr name="colorLightGreen" format="color" />
+        <attr name="colorCyan" format="color" />
+        <attr name="colorLightCyan" format="color" />
+        <attr name="colorLightBlue" format="color" />
+        <attr name="colorPink" format="color" />
+        <attr name="colorGray" format="color" />
+        <attr name="colorLightGray" format="color" />
+
+        <attr name="colorTimestamp" format="reference|color" />
+        <attr name="colorStatusText" format="reference|color" />
+        <attr name="colorDisconnected" format="reference|color" />
+        <attr name="colorSenderFallbackColor" format="reference|color" />
+        <attr name="colorTopic" format="reference|color" />
+
+        <attr name="colorMemberOwner" format="color" />
+        <attr name="colorMemberAdmin" format="color" />
+        <attr name="colorMemberOp" format="color" />
+        <attr name="colorMemberHalfOp" format="color" />
+        <attr name="colorMemberVoice" format="color" />
+        <attr name="colorMemberNormal" format="color" />
+    </declare-styleable>
+
+</resources>

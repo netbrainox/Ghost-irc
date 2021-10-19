@@ -1,0 +1,217 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="actionBarTheme">@style/AppTheme.AppBarOverlay</item>
+
+        <item name="textFormatBarStyle">@style/TextFormatBar</item>
+        <item name="recyclerViewScrollbarStyle">@style/RecyclerViewScrollbar</item>
+
+        <item name="iconColor">@color/iconColor</item>
+        <item name="iconColorOpaque">@color/iconColorText</item>
+
+        <item name="ircColors">@style/AppTheme.IRCColors</item>
+
+        <item name="actionBarTextColorPrimary">@color/abc_primary_text_material_dark</item>
+        <item name="actionBarTextColorSecondary">@color/abc_secondary_text_material_dark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.OpaqueStatusBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">?attr/actionBarTextColorPrimary</item>
+        <item name="android:textColorSecondary">?attr/actionBarTextColorSecondary</item>
+    </style>
+
+    <style name="AppTheme.LightAppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Widget.Button.Colored" parent="Widget.AppCompat.Button.Colored" />
+
+    <style name="AppTheme.Spinner" parent="Widget.AppCompat.EditText" />
+    
+    <style name="AppTheme.IRCColors">
+        <item name="colorBlack">@color/ircBlack</item>
+        <item name="colorWhite">@color/ircWhite</item>
+        <item name="colorBlue">@color/ircBlue</item>
+        <item name="colorGreen">@color/ircGreen</item>
+        <item name="colorLightRed">@color/ircLightRed</item>
+        <item name="colorBrown">@color/ircBrown</item>
+        <item name="colorPurple">@color/ircPurple</item>
+        <item name="colorOrange">@color/ircOrange</item>
+        <item name="colorYellow">@color/ircYellow</item>
+        <item name="colorLightGreen">@color/ircLightGreen</item>
+        <item name="colorCyan">@color/ircCyan</item>
+        <item name="colorLightCyan">@color/ircLightCyan</item>
+        <item name="colorLightBlue">@color/ircLightBlue</item>
+        <item name="colorPink">@color/ircPink</item>
+        <item name="colorGray">@color/ircGray</item>
+        <item name="colorLightGray">@color/ircLightGray</item>
+
+        <item name="colorTimestamp">@color/messageTimestamp</item>
+        <item name="colorStatusText">@color/messageStatusText</item>
+        <item name="colorDisconnected">@color/messageDisconnected</item>
+        <item name="colorSenderFallbackColor">?attr/colorBlue</item>
+        <item name="colorTopic">@color/messageTopic</item>
+
+        <item name="colorMemberOwner">@color/memberOwner</item>
+        <item name="colorMemberAdmin">@color/memberAdmin</item>
+        <item name="colorMemberOp">@color/memberOp</item>
+        <item name="colorMemberHalfOp">@color/memberHalfOp</item>
+        <item name="colorMemberVoice">@color/memberVoice</item>
+        <item name="colorMemberNormal">@color/memberNormal</item>
+    </style>
+
+    <style name="Icon">
+        <item name="tint">?attr/iconColor</item>
+        <item name="tintMode">src_in</item>
+    </style>
+
+    <style name="Icon.Opaque">
+        <item name="tint">?attr/iconColorOpaque</item>
+    </style>
+
+    <style name="EditServerIcon" parent="Icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="EditServerIcon.TextInput" parent="EditServerIcon">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">14dp</item>
+    </style>
+
+    <style name="EditServerTextInput" parent="Widget.Design.TextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginLeft">56dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="EditServerTextInput.ExtraAction" parent="EditServerTextInput">
+        <item name="android:layout_marginRight">56dp</item>
+    </style>
+
+    <style name="BaseEditServerExtraAction" parent="Icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="EditServerExtraAction" parent="BaseEditServerExtraAction">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="EditServerItemContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/add_server_item_spacing</item>
+    </style>
+
+    <style name="MessageFormatSettingsDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="MessageFormatSettingsTextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin_s4</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin_s4</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="MessageFormatSettingsExampleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+    </style>
+
+    <style name="EditTextWithExpandIcon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">32dp</item>
+    </style>
+
+    <style name="EditTextExpandIconButton" parent="Icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">-40dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginRight">-4dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="TextFormatBar">
+        <item name="android:padding">4dp</item>
+        <item name="android:background">?attr/colorBackgroundFloating</item>
+    </style>
+
+    <style name="TextFormatBarButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:background">@drawable/format_item_background</item>
+        <item name="tint">?attr/iconColorOpaque</item>
+    </style>
+
+    <style name="RecyclerViewScrollbar">
+        <item name="android:padding">8dp</item>
+        <item name="scrollbarDrawable">@drawable/recyclerview_scrollbar</item>
+        <item name="scrollbarTint">@color/recyclerview_scrollbar_tint_list</item>
+        <item name="minScrollbarHeight">24dp</item>
+        <item name="letterDrawable">@drawable/recyclerview_scrollbar_letter</item>
+        <item name="letterTint">?attr/colorAccent</item>
+        <item name="letterTextAppearance">@style/ScrollbarLetterTextAppearance</item>
+    </style>
+
+    <style name="ScrollbarLetterTextAppearance">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="BottomSheetIconTextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#DE000000</item>
+    </style>
+
+    <style name="MaterialColorPickerDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowMinWidthMinor">16dp</item>
+        <item name="android:windowMinWidthMajor">16dp</item>
+    </style>
+
+</resources>
