@@ -1,4 +1,4 @@
-Revolution IRC
+Ghost-IRC
 ==============
  
 Revolution IRC Client is the next-generation IRC client for Android, made with design and functionality in mind. Let's start this revolution!
